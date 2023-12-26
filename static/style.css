@@ -1,0 +1,301 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+*{
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #0F0F1A;
+  display: flex;
+  flex-direction: row;
+  overflow-x: hidden;
+}
+
+.container{
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0F0F1A;
+  border-bottom-left-radius: 150px;
+  position: absolute;
+  right: 0px;
+}
+
+.container #btn-login{
+  color: white;
+  background-color: transparent;
+  position: absolute;
+  right: 60px;
+  top: 30px;
+  font: 400 1.2em arial, sans-serif;
+  border: 1pt solid white;
+  border-radius: 20px;
+  padding: 2px 20px;
+}
+
+form{
+  display: flex;
+  width: 350px;
+  flex-direction: column;
+  padding: 30px;
+}
+
+form h1{
+  color: white;
+  font: 600 2.5em arial, sans-serif;
+  margin-left: -2px;
+}
+
+form div{
+  display: flex;
+  flex-direction: column;
+  row-gap: .7rem;
+}
+
+form input{
+  width: 100%;
+  background-color: #0F0F1A;
+  border: none;
+  border-bottom: 1pt solid gray;
+  outline: none;
+  color: rgb(255, 255, 255, .9);
+  outline-offset: none;
+  font: 400 13pt arial, sans-serif;
+  padding: 0px 0px 7px 5px;
+}
+
+form input::placeholder{
+  color: rgb(255, 255, 255, .5);
+  position: absolute;
+  font: 400 .8em arial, sans-serif;
+}
+
+form button{
+  width: 130px;
+  padding: 2px 10px;
+  font: 500 1.4em arial, sans-serif;
+  color: white;
+  border-radius: 20px;
+  background-color: transparent;
+  border: .9pt solid white;
+}
+
+form label{
+  color: rgb(255, 255, 255, .9);
+  font: 500 1.2em arial, sans-serif;
+}
+
+.check{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: .5rem;
+  margin-bottom: 30px;
+}
+
+.input-email{
+  margin: 30px 0px;
+}
+
+.input-password{
+  margin: 0px 0px 30px 0px;
+}
+
+form input[type="checkbox"]{
+  width: 15px;
+  height: 15px;
+}
+
+.check label{
+  font: 600 .8em arial, sans-serif;
+  color: gray;
+}
+
+.check span{
+  text-decoration: underline;
+  color: blue;
+  cursor: pointer;
+}
+
+.img-container{
+  width: 50%;
+  height: 100vh;
+  z-index: 4;
+  background-color: rgb(255, 255, 255); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-right-radius: 200px;
+}
+
+.titulo-img{
+  position: absolute;
+  left: 80px;
+  top: 30px;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.img-container h1{
+  font: 600 3em arial, sans-serif;
+  color: #0F0F1A;
+}
+
+#h1-linha{
+  width: 100px;
+  height: 10px;
+  border-bottom: 7px solid #7E57C2;
+  margin: -5px;
+}
+
+.div-image{
+  width: 90%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.div-image img{
+  width: 100%;
+}
+
+.fundo-preto{
+  background-color: #0F0F1A;
+  width: 100%;
+  height: 50vh;
+  position: absolute;
+  z-index: -4;
+}
+
+.fundo-branco{
+  width: 100%;
+  height: 50vh;
+  position: absolute;
+  bottom: 0px;
+  z-index: -3;
+  display: flex;
+  flex-direction: row-reverse;
+  background-color: white;
+}
+
+.reset{
+  width: 50%;
+  height: 100vh;
+  position: absolute;
+  right: 0px;
+  z-index: -3;
+  background-color: #0F0F1A;
+  border-bottom-left-radius: 150px;
+}
+
+#container1{
+  transition: all .5s ease-in-out;
+}
+
+#container2{
+  position: absolute;
+  z-index: -1;
+  right: -50%;
+  transition: all .5s ease-in-out;
+}
+ #container1.ativo{
+   z-index: -2;
+   transform: translateX(-60%);
+ }
+
+#container2.ativo{
+  z-index: 2;
+  transform: translateX(-100%);
+}
+
+.reset.ativo{
+  z-index: -2;
+  background-color: #0F0F1A;
+
+}
+
+@media screen and (max-width: 800px){
+  .img-container{
+    display: none;
+  }
+
+  .container{
+    width: 100%;
+    border-radius: 0px;
+  }
+
+  #container2{
+    right: -100%;
+  }
+
+  .reset{
+    display: none;
+  }
+
+  .fundo-preto{
+    display: none;
+  }
+
+  .fundo-branco{
+    display: none;
+  }
+
+  #container.ativo{
+    transform: translateX(-100%);
+    z-index: -2;
+  }
+
+  #container2.ativo{
+    z-index: 1;
+    transform: translateX(-100%);
+  }
+}
+
+@media screen and (max-width: 600px){
+  @keyframes ani{
+    from{
+      opacity: 0;
+    } to{
+    opacity: 1;
+    }
+  }
+  
+  body{
+    overflow-x: hidden;
+  }
+  #container2{
+    width: 100%;
+    z-index: -1;
+    right: 0px;
+    opacity: 0;
+    transition: all 3s ease-in-out;
+  }
+
+  #container1{
+    z-index: 2;
+    transition: all .8s ease-out;
+  }
+
+  #container1.ativo{
+    transform: translateX(-100%);
+    z-index: 2;
+  }
+
+  #container2.ativo{
+    transform: translateX(0);
+    z-index: 1;
+    opacity: 1;
+  }
+}
+
+
+

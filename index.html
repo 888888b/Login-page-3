@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="static/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div class="fundo-branco"></div>
+  <div class="fundo-preto"></div>
+  
+  <div class="img-container">
+    <div class="titulo-img">
+      <h1>ViewsLatter</h1>
+      <div id="h1-linha"></div>
+    </div>
+      
+    <div class="div-image">
+      <img src="static/images/ana.png"/>
+    </div>
+  </div>
+
+  <div class="reset" id="reset"></div>
+  
+  <main id="container1" class="container">
+    <section id="cont1">
+      <button onclick="classAdd()" id="btn-login">Log in</button>
+      <form id="form">
+        <h1>Sign up</h1>
+        <div class="input-email">
+          <label for="email">E-mail</label>
+          <input id="email" type="text" placeholder="Enter your email" required/>
+        </div>
+        <div class="input-password">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Create your password" required/>
+        </div>
+        <div class="check">
+          <input id="btn-check" type="checkbox" required/>
+          <label for="btn-check">By signing up you agree <span>Terms & Services</span></label>
+        </div>
+        <button>Sign up</button>
+      </form>
+    </section>
+  </main>
+
+  <main id="container2" class="container">
+    <section id="cont2">
+      <button id="btn-login" onclick="classAdd()">Sign up</button>
+      <form>
+        <h1>Login</h1>
+        <div class="input-email">
+          <label for="email">E-mail</label>
+          <input id="email" type="text" placeholder="Enter your email" required/>
+        </div>
+        <div class="input-password">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Type your password" required/>
+        </div>
+        <div class="check">
+          <input id="btn-check" type="checkbox" required/>
+          <label for="btn-check">By signing in you agree <span>Terms & Services</span></label>
+        </div>
+        <button>Sign in</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="static/script.js"></script>
+</body>
+
+</html>
