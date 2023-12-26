@@ -136,7 +136,7 @@ form input[type="checkbox"]{
 
 .titulo-img{
   position: absolute;
-  left: 80px;
+  left: 45px;
   top: 30px;
   z-index: 3;
   display: flex;
